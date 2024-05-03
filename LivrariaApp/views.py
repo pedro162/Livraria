@@ -39,7 +39,7 @@ def livro_delete(request, pk, template_name='livro_delete.html'):
    
     livro = Livro.objects.get(pk=pk)
     if request.method == 'POST':
-        livro = form.delete()
+        livro = livro.delete()
         return redirect("listar_livros")
     
     return render(request, template_name, {'livro':livro})
