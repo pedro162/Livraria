@@ -2,20 +2,20 @@
 
 {% block title %}
     Remoção de livros
-{% endtitle %}
+{% endblock title %}
 
 {% block tituloPagina %}
     Remoção de Livros
-{% endblock %}
+{% endblock tituloPagina %}
 
 {% block content %}
     <form type="post" >
         {%csrf_token%}
-        <h4>Tem ceteza que deseja excluir o livro "{{livro.titulo}}"</h4>
+        <h4>Tem ceteza que deseja excluir o livro "{{livro.titulo}}" ? </h4>
         <hr/>
         <br/>
         <button type="submit" class="btn btn-primary" >
             Remover
         </button>
     </form>
-{% endblock %}
+{% endblock content %}
